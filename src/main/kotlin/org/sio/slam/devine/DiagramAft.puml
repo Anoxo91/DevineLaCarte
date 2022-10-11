@@ -1,0 +1,35 @@
+@startuml
+
+start
+: Demarage du jeu;
+: Demander l'aide (oui ou non);
+: Demander le paquet de cartes (32 ou 52);
+: Instanciation du jeu;
+
+
+repeat
+repeat: Donner un nom de carte;
+
+
+: Donner une couleur de carte;
+backward:Redemander la carte;
+
+
+repeat while (Existe?) is (Non) not (Oui)
+
+if (Carte TrouvÃ© ?) then (Oui)
+        :Fin de la partie par victoire;
+       
+stop
+else (Non)
+    if (Aide?) then (Non)
+        
+    else (Oui)
+        :Indication position carte (+ ou -);
+endif
+if (Abandonner ?) then (Oui)
+:Fin de la partie par Abandon;
+stop
+    else (Non)
+
+@enduml

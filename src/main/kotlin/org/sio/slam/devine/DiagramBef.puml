@@ -1,0 +1,24 @@
+
+@startuml ! pragma useVerticalIf on
+title Diagramme d'activité 1
+
+start
+
+:Création du paquet;
+: Instanciation du jeu;
+: Donner un nom;
+: Donner une couleur;
+
+if (Définition couleur et nom) then (Pas Bon)
+    :Erreur et affichage de La carte donnée;
+
+else (Bon)
+    if (Carte devinée) then (oui)
+        :affichage de la carte à deviner;
+    else(non)
+endif
+endif
+:fin de la partie;
+stop
+
+@enduml
