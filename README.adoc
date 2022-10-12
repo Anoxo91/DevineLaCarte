@@ -95,12 +95,13 @@ En résumé : Une instance de `Jeu` est reliée, à un instant _t_, à
 * un paquet de cartes, lui-même relié à un ensemble de cartes  (`cartes`), et
 * une instance de `Carte` (`carteADeviner` est la carte que le joueur doit deviner)
 
+<<<
 
 == Travail réalisé
 Je vais ici vous presenter et expliquer mon travail comme mes différents tests unitaires et comment mon code fonctionne
 
 === Challenge 1
-Dans ce challenge nous avons dû rendre opérationel 4 tests unitaires.
+_Dans ce challenge nous avons dû rendre opérationel 4 tests unitaires._
 
 1. `fabriqueDe52Cartes()`
 
@@ -118,8 +119,10 @@ Je n'ai pas fais de test testGetCartes() puis'que je test deja dans les tests de
 ici j'ai du modifier la methode : compareTo(other: Carte): Int +
 pour que si les valeurs sont egales elle se compare en fonction de leurs couleurs
 
+<<<
+
 === Challenge 2
-Dans ce challenge nous avons dû realiser tout les *_TODO_* de la console de jeu pour ensuite le rentranscrire avec un algorithme.
+_Dans ce challenge nous avons dû realiser tout les *_TODO_* de la console de jeu pour ensuite le rentranscrire avec un algorithme._
 
 * *_TODO : demander au joueur s'il souhaite avoir de l'aide pour sa partie_* +
 Pour ce TODO j'ai cree une boucle qui va demander si oui ou non le joueur souhaite de l'aide
@@ -157,6 +160,8 @@ endif
 stop
 @enduml
 ----
+
+<<<
 
 === Algo aprés TODO realisé
 
@@ -200,9 +205,11 @@ stop
 ----
 
 
+<<<
+
 
 === Challenge 3
-Dans ce challenge nous avons dû realiser une fonction batLesCartes() qui melange les cartes d'un paquet.
+_Dans ce challenge nous avons dû realiser une fonction batLesCartes() qui melange les cartes d'un paquet._
 
 * pour ceci j'ai utilisé une methode de Kotlin : .shuffled() +
 qui ici va recupere une liste de carte la melanger et resortir cette meme liste avec leurs index indexé de facon aleatoir
@@ -218,7 +225,7 @@ le nombre d'essaie que le joueur a tenté dans sa partie et si il a abandonné
 
 * Ensuite grace a ces informations si le joueur a abandoné il n'a pas de stategie
 
-* Si le joueur a joué avec l'aide je recupere le nombre de carte avec lequel il a joué et grace a la fonction log2() de kotlin qui determine de facon dichotomique le nombre d'essaie qui faudrait mathematiquement pour trouver la carte, je vais comparer le nombre d'essaie du joueur et le resultat de l'operation log2(52 ou 32) pour etablir le niveau ou la chance du joueur
+* Si le joueur a joué avec l'aide je recupere le nombre de carte avec lequel il a joué et grace a la fonction *log2()* de kotlin qui determine de facon dichotomique le nombre d'essaie qui faudrait mathematiquement pour trouver la carte, je vais comparer le nombre d'essaie du joueur et le resultat de l'operation log2(52 ou 32) pour etablir le niveau ou la chance du joueur
 
 * Si le joueur n'a pas activé l'aide il a en theori 1 chance sur 32 ou 52 celon le jeu choisit pour trouver la bonne carte +
 dans ma strategie j'ai estimé que 30% de chance etait mon point de chute entre "pas de chance" et "a de la chance"
